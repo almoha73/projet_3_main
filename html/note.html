@@ -4,19 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/89bb515681.js" crossorigin="anonymous"></script>
-    <title>palette</title>
+    <link rel="stylesheet" href="/style.css">
+    <title>La Note</title>
 </head>
+
 <body>
     <header>
-        <div class="headermenu header__palette">
-            <a href="index.html"><i class="fas fa-arrow-left"></i></a>
+        <div class="headermenu header__note">
+            <a href="/index.html"><i class="fas fa-arrow-left"></i></a>
             <h1 class="headermenu__title">ohmyfood</h1>
-        </div>
-
+        </div>    
+        
         <div class="restaurant-menu menu__palette">
-            <h1>La palette du goût</h1>
+            <h1>La note enchantée</h1>
             <div class="restaurant-menu__heart palette__heart">
                 <img class="restaurant-menu__heart--border palette__heart--border" src="images/heart.png" alt="">
                 <img class="restaurant-menu__heart--solid palette__heart--solid" src="images/like1.png" alt="">
@@ -26,12 +27,12 @@
 
     <div class="principal">
         <p>ENTREES</p>
-        <div class="entrees">
-            <div class="plat">
-                <p>Fricassée d'escargot</p>
+        <div class="entrees lanote ">
+            <div class="plat lanote__entree ">
+                <p>Ravioles de foie gras</p>
                 <div class="plat__ingredient">
-                    <p>Au piment d'espelette</p>
-                    <span class="suspension__none">40€</span>
+                    <p>Accompagnés de leur crême à la truffe</p>
+                    <span>25€</span>
                 </div>
                 <div class="check">
                     <div><i class="fas fa-check"></i></div>
@@ -39,9 +40,9 @@
             </div>
             
             <div class="plat">
-                <p>Foie gras de canard mi-cuit</p>
+                <p>Caviar ociètre</p>
                 <div class="plat__ingredient">
-                    <p>Et ses copeaux de truffe noire</p>
+                    <p>Sur blini à la farine de blé noir</p>
                     <span>35€</span>
                 </div>
                 <div class="check">
@@ -50,24 +51,35 @@
             </div>
         
             <div class="plat">
-                <p>Oeuf au plat</p>
+                <p>Homard et espuma de</p>
                 <div class="plat__ingredient">
-                    <p>Assaisoné à la truffe sur lit de caviar</p>
+                    <p>Mariné aux zestes d'orange</p>
                     <span>20€</span>
                 </div>
                 <div class="check">
                     <div><i class="fas fa-check"></i></div>
                 </div>
             </div>
-        </div>
 
+            <div class="plat plat__enplus">
+                <p>Foie gras de canard cuit entier</p>
+                <div class="plat__ingredient">
+                    <p>Confiture de figue et pain toasté</p>
+                    <span>35€</span>
+                </div>
+                <div class="check">
+                    <div><i class="fas fa-check"></i></div>
+                </div>
+            </div>
+        </div>
+    
 
         <p>PLATS</p>
-        <div class="plats">
+        <div class="plats lanote__plat">
             <div class="plat">
-                <p>Filet de boeuf aux herbes</p>
+                <p>Noix de coquilles Saint-Jacques</p>
                 <div class="plat__ingredient">
-                    <p>Accompagné de sa ribambelle de lég</p>
+                    <p>Sur lit de purée de céleri-rave</p>
                     <span>40€</span>
                 </div>
                 <div class="check">
@@ -76,10 +88,10 @@
             </div>
             
             <div class="plat">
-                <p>Parmentier de queue de boeuf</p>
+                <p>Langoustine poêlée</p>
                 <div class="plat__ingredient">
-                    <p>A la trufe noire sur sa purée de panaïs</p>
-                    <span>35€</span>
+                    <p>Purée de patate douce</p>
+                    <span class="suspension__none">35€</span>
                 </div>
                 <div class="check">
                     <div><i class="fas fa-check"></i></div>
@@ -87,25 +99,25 @@
             </div>
             
             <div class="plat">
-                <p>Filet de Turbot</p>
+                <p>Mijoté de queue de boeuf</p>
                 <div class="plat__ingredient">
-                    <p>Aux agrumes</p>
-                    <span class="suspension__none">44€</span>
+                    <p>Et riz sauvage aux zests de citron</p>
+                    <span>44€</span>
                 </div>
                 <div class="check">
                     <div><i class="fas fa-check"></i></div>
                 </div>
             </div>
         </div>
-
+    
 
         <p>DESSERTS</p>
-        <div class="desserts">
+        <div class="desserts lanote__dessert">
             <div class="plat">
-                <p>Paris-Brest</p>
+                <p>Macaron noisette et chocolat</p>
                 <div class="plat__ingredient">
-                    <p>Revisité</p>
-                    <span class="suspension__none">18€</span>
+                    <p>Glace au caramel brun et sel de Guérande</p>
+                    <span>18€</span>
                 </div>
                 <div class="check">
                     <div><i class="fas fa-check"></i></div>
@@ -113,9 +125,9 @@
             </div>
             
             <div class="plat">
-                    <p>Macaron au chocolat d'exception</p>
+                    <p>Baba au rhum revisité</p>
                     <div class="plat__ingredient">
-                        <p>Et glace à la vanille de Madagascar</p>
+                        <p>Avec son coulis de citron</p>
                         <span>22€</span>
                     </div>
                     <div class="check">
@@ -124,24 +136,23 @@
             </div>
             
             <div class="plat">
-                    <p>Mousse au chocolat</p>
+                    <p>Tarte au citron meringuée</p>
                     <div class="plat__ingredient">
-                        <p>Au piment d'espelette et à la truffe noire</p>
-                        <span>23€</span>
+                        <p>Destructurée</p>
+                        <span class="suspension__none">23€</span>
                     </div>
                     <div class="check">
                         <div><i class="fas fa-check"></i></div>
                     </div>
             </div> 
         </div>
-
+        
         <a class="header-button" href=""><div class="header__button--menu">Commander</div></a>
     </div>
     
-
-        
-
+            
     
+        
     <footer>
         <h2>ohmyfood</h2><br>
         <div class="footer__ustensile">
@@ -157,6 +168,8 @@
         <p><a class="mail" href="mailto:almoha@gmail.com">Contact</a></p>
 
     </footer>   
+        
+</body>    
     
-</body>
+
 </html>
