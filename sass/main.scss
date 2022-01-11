@@ -16,14 +16,17 @@ $color-secondary: #9356dc;
 $color-tertiary: #99e2d0;
 $color-gradient: linear-gradient(#ff79d4 0%, #9356dc 100%);
 $titre: 'Shrikhand', cursive;
-
+html{
+  font-size: 62.5%;
+}
 body{
     font-family: 'Roboto', sans-serif;
+    font-size: 1.6em;
     background-color: #f6f6f6;
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 100vh;
+    height: auto;
     z-index: 0;
 }
 
@@ -35,50 +38,50 @@ main{
     justify-content: space-evenly;
     flex-wrap: wrap;
     flex: 1; 
-    @media (min-width: 768px) and (max-width: 1336px){
+    @media (max-width: 992px){
         flex-direction: column;
         align-items: center;
-        justify-content: space-evenly;
+        justify-content: center;
     }
 }
 
 /////////////LOADER///////////////////
 /////////////////////////////////////
-.loader{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #eaeaea;
-  width: 100%;
-  height: 100vh;
-  animation: loader  ease-in-out  both;
-  animation: size 1ms linear 2s forwards;
-  z-index: 1;
-  opacity: 1;
-  .spinner{
-    width: 275px;
-    height: 275px;
-    border-radius: 50%;
-    border: 10px solid transparent;
-    border-top-color: #99e2d0;
-    border-bottom-color: #ff79d4;
-    animation: spinner 1s linear infinite;
+// .loader{
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   background-color: #eaeaea;
+//   width: 100%;
+//   height: 100vh;
+//   animation: loader  ease-in-out  both;
+//   animation: size 1ms linear 2s forwards;
+//   z-index: 1;
+//   opacity: 1;
+//   .spinner{
+//     width: 275px;
+//     height: 275px;
+//     border-radius: 50%;
+//     border: 10px solid transparent;
+//     border-top-color: #99e2d0;
+//     border-bottom-color: #ff79d4;
+//     animation: spinner 1s linear infinite;
     
-  }
-}
+//   }
+// }
 
-@keyframes spinner{
-    to {
-      transform: rotate(360deg); 
-    }
-}
-@keyframes size {
-  100%{
-    width: 0;
-    height: 0;
-    transform: translateY(-9999px);
-  }
-}
+// @keyframes spinner{
+//     to {
+//       transform: rotate(360deg); 
+//     }
+// }
+// @keyframes size {
+//   100%{
+//     width: 0;
+//     height: 0;
+//     transform: translateY(-9999px);
+//   }
+// }
 
 
 //////////////LES BOUTONS////////////////
@@ -192,77 +195,109 @@ main{
 /* Mixin SECTION*/
 
 @mixin restaurantCards{
+   
     .restaurant-card{
-      width:332px;
-      height: 248px;
+      width: 100%;
+      height: 100%;
       border-radius: 1rem;
-      background-size: cover;
-      background-position: center;
-      position: relative;
       box-shadow: -1px 2px 12px 8px rgba(229,229,229,0.75);
-      &:hover{
-        box-shadow: -1px 2px 08px 4px rgb(147,86,220);
-        transform: scale(1.01);
+      position: relative;
+
+      @media (max-width: 992px){
+        height: 100%;
       }
+      @media (max-width: 768px){
+        width: 100%;
+        height: 100%;
+      }
+
         &::after{
-          width: 80px;
-          height: 29px;
+          content: "";
+          width: 10%;
+          height: 5%;
           background-color: $color-tertiary;
-          position: absolute;
-          line-height: 29px;
+          position: relative;
+          line-height: 2rem;
           text-align: center;
           color: #008766;
-          left: 238px;
-          top: 15px;
+          top: 200px;
         }
-        &__text{
-          width: 332px;
-          height: 70px;
-          background: white;
-          position: relative;
-          top: 180px;
-          border-radius: 0 0 1rem 1rem;
-          & h3, & p{
-            padding-left: 10px;
-            padding-top: 10px;
-            line-height: 15px;
-          }
+        &:hover{
+          box-shadow: -1px 2px 08px 4px rgb(147,86,220);
+          transform: scale(1.01);
         }
-        @include heart;
-        @include heartMenu;
     }
-  }  
+}
 
-  @mixin heart{
-    &__heart{
-      position: relative;
-      left: 270px;
-      bottom: 20px;
-      
-        &--solid{
-          position: relative;
-          bottom: 34px;
-          
-       }  
+@mixin restaurantCardsText {
+  .restaurant-card__text{
+    width: 100%;
+    height: 21%;
+    background: white;
+    position: relative;
+    bottom: 21%;
+    border-radius: 0 0 1rem 1rem;
+    @media (max-width: 768px){
+      height: 26%;
+      bottom: 26%;
     }
+    & h3, & p{
+      font-size: 1.2vmax;
+      padding-left: 1vmin;
+      padding-top: 0.2vmax;
+      @media (max-width: 992px){
+        font-size: 2.1vmin;
+      }
+      @media (max-width: 768px){
+        font-size: 3.5vmin;
+      }
+    }
+    @include heartMenu;
   }
+}
+      
+    
+
+  // @mixin heart{
+  //   &__heart{
+  //     position: relative;
+  //     left: 270px;
+  //     bottom: 20px;
+      
+  //       &--solid{
+  //         position: relative;
+  //         bottom: 34px;
+          
+  //      }  
+  //   }
+  // }
 
   @mixin heartMenu{
-    &__heart{
+    .restaurant-card__heart{
       position: relative;
-      display: inline-block;
       &--border{
-        width: 30px;
-        height: 30px;
-        
+        width: 9%;
+        height: auto;
+        position: absolute;
+        bottom: 0.5rem;
+        right: 1rem;
+        @media (max-width: 768px){
+          width: 2.5rem;
+          height: 2.5rem;
+        }
       }
       &--solid{
-        width: 30px;
-        height: 30px;
+        width: 9%;
+        height: auto;
         opacity: 0;
         position: absolute;
+        bottom: 0.5rem;
+        right: 1rem;
         transform: scale(1);
-        right: 0px;
+        @media (max-width: 768px){
+          width: 2.5rem;
+          height: 2.5rem;
+        }
         &:hover{
           opacity: 1;
           transition:  600ms 150ms linear ;
@@ -379,7 +414,7 @@ header{
 aside{
     margin-top: 50px;
     width: 324px;
-    @media (max-width: 420px){
+    @media (max-width: 738px){
         margin-top: 0px;
         background-color: white;
         width: 100%;
@@ -422,48 +457,35 @@ aside{
 /*section de la page d'accueil*/
 
 section{
-    width: 60%;
-    height: auto;
+    width: 47%;
+    height: 47vmax;
     display: flex;
     flex-wrap: wrap;
-    justify-content:space-evenly; 
+    justify-content:space-between; 
     align-items: center;
-   
-    @media (max-width: 768px){
-        height: auto;
-        width: 60%;
-    }  
-    @media (min-width: 768px) and (max-width: 1366px) {
-        height: auto;
+    @media (max-width: 992px){
         width: 80%;
+        height: 70vmax;
     }
+    @media (max-width: 768px){
+      width: 80%;
+      height: auto;
+      flex-direction: column;
+  }
+    
     & a{
         text-decoration: none;
         color: black;
-        height: 248px;
+        width: 45%;
+        height: 35%;
         margin-bottom: 30px;
+        @media (max-width: 768px){
+          width: 100%;
+          height: 45vmin;
+          flex-direction: column;
+      }
     } 
 @include restaurantCards;
+@include restaurantCardsText;
 }
 
-.palette{
-    background-image: url("images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
-    &::after{
-        content: "Nouveau";
-    }
-}   
-
-.note{
-    background-image: url("images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
-    &::after{
-        content: "Nouveau";   
-    }       
-}
-
-.francaise{
-     background-image: url("images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");           
-}
-
-.delice{
-    background-image: url("images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");        
-}
