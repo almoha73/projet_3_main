@@ -1,0 +1,56 @@
+.header__title--accueil{
+    font-size: 70px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    font-family: $titre;
+    color: black;
+    animation: slide-in-top 0.8s 2s ease-out both;
+    @media (max-width: 420px) {
+      font-size: 30px;
+      margin-top: 0px;
+      margin-bottom: 0px;
+      width: 100%;
+      text-align: center;
+      background-color: white;
+      line-height: 70px;
+    }
+    
+  }
+  
+  @keyframes slide-in-top {
+      0% {
+        
+      transform: translateX(-1000px);
+        opacity: 0;
+      }
+      100% {
+        
+      transform: translateY(0);
+      opacity: 1;
+      }
+  }
+
+@mixin bouton{
+    padding: 15px;
+    border-radius: 2rem;
+    border-color: transparent;
+    background: $color-gradient;
+    color: white;
+    font-size: 20px;
+    box-shadow: 0px 3px 12px -2px $color-secondary;
+    &:hover{
+        opacity: 0.9;
+        box-shadow: 0px 5px 14px -2px $color-secondary;
+    }
+}
+
+.header__button{
+    margin-top: 40px;
+    
+    @include bouton;
+    width: 250px;
+
+}
+.header-button{
+  text-decoration: none;
+}

@@ -1,0 +1,140 @@
+//RESET//////
+////////////
+
+
+*,
+::before,
+::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/////////VARIABLES////////
+//////////////////////////
+$color-primary: #ff79da;
+$color-secondary: #9356dc;
+$color-tertiary: #99e2d0;
+$color-gradient: linear-gradient(#ff79d4 0%, #9356dc 100%);
+$titre: 'Shrikhand', cursive;
+html{
+  font-size: 62.5%;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.6em;
+    background-color: #f6f6f6;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    z-index: 0;
+}
+
+main{
+    margin-top: 50px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    flex: 1; 
+    @media (max-width: 992px){
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+/////////////LOADER///////////////////
+/////////////////////////////////////
+
+
+
+//////////////LES BOUTONS////////////////
+////////////////////////////////////////
+
+
+
+
+
+/*ANIMATION TITRE PAGE D'ACCUEIL  */
+///////////////////////////////////
+
+
+
+/* MIXIN ASIDE*/
+///////////////
+
+
+
+/* Mixin SECTION*/
+
+      
+    
+
+  // @mixin heart{
+  //   &__heart{
+  //     position: relative;
+  //     left: 270px;
+  //     bottom: 20px;
+      
+  //       &--solid{
+  //         position: relative;
+  //         bottom: 34px;
+          
+  //      }  
+  //   }
+  // }
+
+  
+  
+
+  @keyframes check_translate{
+    0%{
+      transform: translateX(0px); 
+    }
+    100%{
+    transform: translateX(-58px);
+    }
+  }
+  
+  @keyframes check_rotate{
+    0%{  
+        transform: rotateZ(0turn); 
+      }
+      100%{  
+        transform: rotateZ(2turn);
+      }
+  }
+
+  @keyframes decalage_plats{
+    10%{
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    50%{
+      opacity: 1;
+      
+    }
+    100%{
+      opacity: 1;
+      transform: translateY(0px);
+    }
+    }
+
+/*mise en page de la page d'accueil*/
+/////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////
+
+/*header page d'accueil*/
+
+
+
+/*aside*/
+
+
+
+/*section de la page d'accueil*/
+
+
+
