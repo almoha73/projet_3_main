@@ -74,3 +74,10 @@
         background-image: url(images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
       }
   }
+  @use "/sass/homepage/section.scss";
+
+  .restaurant-menu__heart{
+    @include heartMenu;
+  }
+
+

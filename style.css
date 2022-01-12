@@ -64,36 +64,6 @@ main {
 /*header page d'accueil*/
 /*aside*/
 /*section de la page d'accueil*/
-.loader {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #eaeaea;
-  width: 100%;
-  height: 100vh;
-  animation: loader  ease-in-out  both;
-  animation: size 1ms linear 2s forwards;
-  z-index: 1;
-  opacity: 1; }
-  .loader .spinner {
-    width: 275px;
-    height: 275px;
-    border-radius: 50%;
-    border: 10px solid transparent;
-    border-top-color: #99e2d0;
-    border-bottom-color: #ff79d4;
-    animation: spinner 1s linear infinite; }
-
-@keyframes spinner {
-  to {
-    transform: rotate(360deg); } }
-
-@keyframes size {
-  100% {
-    width: 0;
-    height: 0;
-    transform: translateY(-9999px); } }
-
 aside {
   margin-top: 50px;
   width: 324px; }
@@ -265,11 +235,11 @@ section {
     color: black;
     width: 45%;
     height: 35%;
-    margin-bottom: 30px; }
+    display: block; }
     @media (max-width: 768px) {
       section a {
         width: 100%;
-        height: 45vmin;
+        height: 50vmin;
         flex-direction: column; } }
   section .restaurant-card {
     width: 100%;
@@ -284,16 +254,6 @@ section {
       section .restaurant-card {
         width: 100%;
         height: 100%; } }
-    section .restaurant-card::after {
-      content: "";
-      width: 10%;
-      height: 5%;
-      background-color: #99e2d0;
-      position: relative;
-      line-height: 2rem;
-      text-align: center;
-      color: #008766;
-      top: 200px; }
     section .restaurant-card:hover {
       box-shadow: -1px 2px 8px 4px #9356dc;
       transform: scale(1.01); }
@@ -346,6 +306,27 @@ section {
           opacity: 1;
           transition: 600ms 150ms linear;
           transform: scale(1.05); }
+
+section a.palette, section a.note {
+  position: relative; }
+  section a.palette::after, section a.note::after {
+    content: "Nouveau";
+    font-size: 1vmax;
+    position: absolute;
+    width: 25%;
+    height: 12%;
+    background-color: #99e2d0;
+    position: absolute;
+    line-height: 2vmax;
+    text-align: center;
+    color: #008766;
+    bottom: 82%;
+    z-index: 2;
+    right: 4%; }
+
+.note {
+  object-fit: cover;
+  object-position: 0 -143px; }
 
 footer {
   width: 100%;
@@ -453,6 +434,36 @@ footer {
 
 .header__delice::before {
   background-image: url(images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg); }
+
+@use "/sass/homepage/section.scss";
+.restaurant-menu__heart {
+  position: relative; }
+  .restaurant-menu__heart--border {
+    width: 9%;
+    height: auto;
+    position: absolute;
+    bottom: 0.5rem;
+    right: 1rem; }
+    @media (max-width: 768px) {
+      .restaurant-menu__heart--border {
+        width: 2.5rem;
+        height: 2.5rem; } }
+  .restaurant-menu__heart--solid {
+    width: 9%;
+    height: auto;
+    opacity: 0;
+    position: absolute;
+    bottom: 0.5rem;
+    right: 1rem;
+    transform: scale(1); }
+    @media (max-width: 768px) {
+      .restaurant-menu__heart--solid {
+        width: 2.5rem;
+        height: 2.5rem; } }
+    .restaurant-menu__heart--solid:hover {
+      opacity: 1;
+      transition: 600ms 150ms linear;
+      transform: scale(1.05); }
 
 .restaurant-menu {
   width: 80%;
