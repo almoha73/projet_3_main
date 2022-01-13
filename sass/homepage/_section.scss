@@ -1,4 +1,4 @@
-
+@use "../abstract/" as *;
 @mixin restaurantCards{
    
     .restaurant-card{
@@ -55,23 +55,23 @@
 @mixin heartMenu{
       position: relative;
       &--border{
-        width: 9%;
+        width: 2vmax;
         height: auto;
         position: absolute;
-        bottom: 0.5rem;
-        right: 1rem;
+        bottom: 1vmax;
+        right: 1vmin;
         @media (max-width: 768px){
           width: 2.5rem;
           height: 2.5rem;
         }
       }
       &--solid{
-        width: 9%;
+        width: 2vmax;
         height: auto;
         opacity: 0;
         position: absolute;
-        bottom: 0.5rem;
-        right: 1rem;
+        bottom: 1vmax;
+        right: 1vmin;
         transform: scale(1);
         @media (max-width: 768px){
           width: 2.5rem;

@@ -16,6 +16,16 @@ $color-secondary: #9356dc;
 $color-tertiary: #99e2d0;
 $color-gradient: linear-gradient(#ff79d4 0%, #9356dc 100%);
 $titre: 'Shrikhand', cursive;
+
+
+
+
+
+
+
+
+
+
 html{
   font-size: 62.5%;
 }
@@ -44,50 +54,6 @@ main{
         justify-content: center;
     }
 }
-
-/////////////LOADER///////////////////
-/////////////////////////////////////
-
-
-
-//////////////LES BOUTONS////////////////
-////////////////////////////////////////
-
-
-
-
-
-/*ANIMATION TITRE PAGE D'ACCUEIL  */
-///////////////////////////////////
-
-
-
-/* MIXIN ASIDE*/
-///////////////
-
-
-
-/* Mixin SECTION*/
-
-      
-    
-
-  // @mixin heart{
-  //   &__heart{
-  //     position: relative;
-  //     left: 270px;
-  //     bottom: 20px;
-      
-  //       &--solid{
-  //         position: relative;
-  //         bottom: 34px;
-          
-  //      }  
-  //   }
-  // }
-
-  
-  
 
   @keyframes check_translate{
     0%{
@@ -122,19 +88,6 @@ main{
     }
     }
 
-/*mise en page de la page d'accueil*/
-/////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////
-
-/*header page d'accueil*/
-
-
-
-/*aside*/
-
-
-
-/*section de la page d'accueil*/
 
 
 
