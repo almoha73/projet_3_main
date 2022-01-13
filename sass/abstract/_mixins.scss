@@ -1,0 +1,17 @@
+@mixin dimensionPosition($width, $height, $position, $bottom, $right){
+    width: $width;
+    height: $height;
+    position: $position;
+    bottom: $bottom;
+    right: $right;
+  }
+
+@mixin widthHeight($width, $height){
+    width: $width;
+    height: $height;
+}
+@mixin flex($flex, $justify, $align){
+    display: $flex;
+    justify-content: $justify;
+    align-items: $align;
+}
